@@ -2,23 +2,29 @@ import React from "react"
 import Button from "../Button/Button"
 
 import styles from "./QuestionCard.module.css"
+import { useNavigate } from "react-router-dom"
 
-const QuestionCard = () => {
+const QuestionCard = ({ id, question, answer, level, completed }) => {
+  const navigate = useNavigate()
+
   return (
     <div className={styles.card}>
       <div className={styles.cardLabels}>
-        <div>Level: 1</div>
-        <div>Not Completed</div>
+        <div>Level: {level}</div>
+        <div>{completed ? "Completed" : "Not Completed"}</div>
       </div>
-      <h5 className={styles.cardTitle}>Что такое JSX?</h5>
+      <h5 className={styles.cardTitle}>{question}</h5>
       <div className={styles.cardAnswers}>
         <label>short answer: </label>
-        <p className={styles.cardAnswer}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus,
-          nemo?
-        </p>
+        <p className={styles.cardAnswer}>{answer}</p>
       </div>
-      <Button onClick={() => {}}>View</Button>
+      <Button
+        onClick={() => {
+          navigate(`/question/${id}`)
+        }}
+      >
+        View
+      </Button>
     </div>
   )
 }
