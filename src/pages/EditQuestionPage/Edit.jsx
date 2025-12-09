@@ -69,7 +69,7 @@ const EditQuestion = ({ initialState = {} }) => {
 
   return (
     <>
-      {isPending || (isQuestionRemoving && <Loader />)}
+      {(isPending || isQuestionRemoving) && <Loader />}
 
       <h1 className={styles.formTitle}>Edit question</h1>
       <div className={styles.formContainer}>
