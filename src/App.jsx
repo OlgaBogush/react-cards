@@ -4,7 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router"
 import HomePage from "./pages/HomePage/HomePage"
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage"
 import QuestionPage from "./pages/QuestionPage/QuestionPage"
-import AddQuestionPage from "./pages/AddQuestionPage/AddQuestionPage"
+// import AddQuestionPage from "./pages/AddQuestionPage/AddQuestionPage"
+import AddQuestionPageLazy from "./pages/AddQuestionPage/AddQuestionPage.lazy"
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/addquestion" element={<AddQuestionPage />} />
+          <Route path="/addquestion" element={<AddQuestionPageLazy />} />
           <Route path="/question/:id" element={<QuestionPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
