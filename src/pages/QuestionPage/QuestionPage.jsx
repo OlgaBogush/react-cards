@@ -6,6 +6,7 @@ import { useFetch } from "../../hooks/useFetch"
 import { API_URL } from "../../constants"
 import Loader from "../../components/Loader/Loader"
 import SmallLoader from "../../components/Loader/SmallLoader"
+import { useAuth } from "../../hooks/useAuth"
 
 import styles from "./QuestionPage.module.css"
 
@@ -15,7 +16,7 @@ const QuestionPage = () => {
   const [isChecked, setIsChecked] = useState(false)
   const { id } = useParams()
   const [card, setCard] = useState(null)
-
+  const { isAuth } = useAuth()
   // custom hook 1
   const [fetchCard, isCardLoading] = useFetch(async () => {
     const response = await fetch(`${API_URL}/react/${id}`)
@@ -101,14 +102,16 @@ const QuestionPage = () => {
             {isCardUpdating && <SmallLoader />}
           </label>
 
-          <Button
-            onClick={() => {
-              navigate(`/editquestion/${card.id}`)
-            }}
-            isDisabled={isCardUpdating}
-          >
-            Edit Question
-          </Button>
+          {isAuth && (
+            <Button
+              onClick={() => {
+                navigate(`/editquestion/${card.id}`)
+              }}
+              isDisabled={isCardUpdating}
+            >
+              Edit Question
+            </Button>
+          )}
 
           <Button
             onClick={() => {
