@@ -1,14 +1,4 @@
 :root {
-  /* --main-bg-color: #23272f;
-  --text-color: #fff;
-
-  --btn-bg-color: #383b3f;
-  --btn-text-color: #fff;
-
-  --green-color: #219679;
-
-  --card-bg-color: #343a46; */
-
   --main-bg-color: #fff;
   --text-color: #000;
 
@@ -19,12 +9,11 @@
 
   --card-bg-color: #ebedf0;
 
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
   font-synthesis: none;
@@ -47,8 +36,8 @@ a:hover {
 }
 
 body {
-  background-color: var(--main-bg-color);
   color: var(--text-color);
+  background-color: var(--main-bg-color);
 }
 
 .darkLayout {
@@ -62,31 +51,3 @@ body {
 
   --card-bg-color: #343a46;
 }
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    --main-bg-color: #fff;
-    --text-color: #000;
-
-    --btn-bg-color: #383b3f;
-    --btn-text-color: #fff;
-
-    --green-color: #219679;
-
-    --card-bg-color: #ebedf0;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --main-bg-color: #23272f;
-    --text-color: #fff;
-
-    --btn-bg-color: #16444f;
-    --btn-text-color: #57c4dc;
-
-    --green-color: #219679;
-
-    --card-bg-color: #343a46;
-  }
-} */
