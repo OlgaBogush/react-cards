@@ -1,5 +1,5 @@
 :root {
-  --main-bg-color: #23272f;
+  /* --main-bg-color: #23272f;
   --text-color: #fff;
 
   --btn-bg-color: #383b3f;
@@ -7,7 +7,17 @@
 
   --green-color: #219679;
 
-  --card-bg-color: #343a46;
+  --card-bg-color: #343a46; */
+
+  --main-bg-color: #fff;
+  --text-color: #000;
+
+  --btn-bg-color: #383b3f;
+  --btn-text-color: #fff;
+
+  --green-color: #219679;
+
+  --card-bg-color: #ebedf0;
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -41,7 +51,19 @@ body {
   color: var(--text-color);
 }
 
-@media (prefers-color-scheme: light) {
+.darkLayout {
+  --main-bg-color: #23272f;
+  --text-color: #fff;
+
+  --btn-bg-color: #16444f;
+  --btn-text-color: #57c4dc;
+
+  --green-color: #219679;
+
+  --card-bg-color: #343a46;
+}
+
+/* @media (prefers-color-scheme: light) {
   :root {
     --main-bg-color: #fff;
     --text-color: #000;
@@ -67,4 +89,4 @@ body {
 
     --card-bg-color: #343a46;
   }
-}
+} */
